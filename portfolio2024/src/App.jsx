@@ -1,11 +1,10 @@
-import Home from "./Home.jsx";
+import Home from "./home";
 
 function App() {
   return (
     <div>
-      <Home />
-      <Home />
-      <Home />
+      {" "}
+      <Home />{" "}
     </div>
   );
 }
