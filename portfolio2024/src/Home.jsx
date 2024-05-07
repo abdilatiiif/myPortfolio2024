@@ -1,8 +1,10 @@
+import ProfilLogo from "./images/profile.png";
+
 function Home() {
   return (
     <header className="header">
       <nav className="navbar">
-        <div className="nav--logo">Logo</div>
+        <img className="nav--logo" src={ProfilLogo} alt="picLogo"></img>
         <ul className="nav--items">
           <li>About</li>
           <li>Skills</li>
