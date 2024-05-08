@@ -7,55 +7,66 @@ import github from "./images/github.png";
 
 function Home() {
   return (
-    <header className="header min-h-full min-w-full p-10 container mx-auto">
-      <nav className="navbar  shadow-2xl flex md:flex-row justify-between items-center h-16 bg-white relative rounded-xl">
-        <img className="nav--logo" src={ProfilLogo} alt="picLogo"></img>
-        <ul className="nav--items gap-2 lg:gap-10  md:flex md:text-center justify-center md:text-xl lg:text-2xl items-center hidden  p-0 m-0 flex uppercase">
-          <li className="uppercase font-light">About</li>
-          <span>/</span>
-          <li className="uppercase font-light">Skills</li>
-          <span>/</span>
-          <li className="uppercase font-light">Projects</li>
-          <span>/</span>
-          <li className="uppercase font-light">Contact</li>
-        </ul>
-        <button className="btn-31">
-          <span className="text-container">
-            <span className="text">Contact</span>
-          </span>
-        </button>
-      </nav>
-      <MainContent />
-    </header>
+    <>
+      <header className="header overflow-hidden min-w-full min-h-screen p-10 container mx-auto">
+        <nav className="navbar  shadow-2xl flex md:flex-row justify-between items-center h-16 bg-white rounded-xl">
+          <img className="nav--logo" src={ProfilLogo} alt="picLogo"></img>
+          <ul className="nav--items gap-2 lg:gap-10  md:flex md:text-center justify-center md:text-xl lg:text-2xl items-center hidden  p-0 m-0 flex uppercase">
+            <li className="uppercase font-light">About</li>
+            <span>/</span>
+            <li className="uppercase font-light">Skills</li>
+            <span>/</span>
+            <li className="uppercase font-light">Projects</li>
+            <span>/</span>
+            <li className="uppercase font-light">Contact</li>
+          </ul>
+          <button className="btn-31">
+            <span className="text-container">
+              <span className="text">Contact</span>
+            </span>
+          </button>
+        </nav>
+        <MainContent />
+      </header>
+    </>
   );
 }
 
 function MainContent() {
   return (
-    <div className="min-w-full min-h-screen mx-auto flex flex-col justify-between relative h-full">
-      <div className="absolute left-4 top-10">
+    <div className=" flex flex-col justify-evenly items-center min-h-screen">
+      <div className="p-5 bg-green-300 md:-translate-x-64 text-3xl">
         {" "}
         Freelance <br></br> Developer & Designer{" "}
       </div>{" "}
-      <div className="flex flex-col md:flex-row">
-        <img
-          className=" w-6/12 max-w-xl rounded-full absolute top-20 right-5 md:right-6 md:top-4 shadow-2xl"
-          src={profilePic}
-          alt=""
-        />
-        <h1 className="text-4xl md:text-5xl md:absolute top-60 left-6 md:top-60 left-0">
-          ABDILATIF M.A
-        </h1>
-        <Socials />
+      <div className="card2">
+        <div className="card2-inner">
+          <div className="card2-front">
+            <img
+              className="max-w-full max-w-xl rounded-full shadow-2xl"
+              src={profilePic}
+              alt="meg"
+            />
+          </div>
+          <div className="card2-back flex flex-col">
+            <div>Age: 28</div>
+            <div>Addresse: Hamar, 2316</div>
+            <div>Telefon: 47 47707***</div>
+            <div>Hobby: Gym, Football + Cooking </div>
+          </div>
+        </div>
       </div>
-      <button className="btn-scroll">Scroll down </button>
+      <button className="btn-scroll absolute bottom-20 border md:right-10">
+        Scroll down{" "}
+      </button>
+      <Socials />
     </div>
   );
 }
 
 function Socials() {
   return (
-    <div className="absolute bottom-2/4 left-10 w-72 h-20 flex justify-center items-center">
+    <div className=" mt-10 bottom-2/4 w-72 h-20 flex justify-center items-center">
       <div className="card">
         <span>Social</span>
         <img className="social-link" src={x} alt="" />
